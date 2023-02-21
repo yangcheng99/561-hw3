@@ -16,7 +16,7 @@ In this homework, we finetunes a blackbox regression model based on three method
 - c (vector)
   - a list of vector that is required in the robustness method
   
-# Basic regulization techniques 
+# Basic Regulization Techniques 
 **Noise Addition**
 
 We add a noise varible which is gaussian with mean 0 and variance $\sigma^2$. The codes are shown below
@@ -77,7 +77,7 @@ def dropout_v2(X,p, max_iters=None):
     return [X*dropout_matrix for dropout_matrix in masks], dropout_matrix_options
   
 ```
-# Parameter finetuning
+# Parameter Finetuning
 **DropOut/NoiseAddition**
 
 For these two methods, we the Monte Carlo M times for each element in the paralist.We then find the correspoding MSE or MAD. After we have run all the experiment, we find the parameter with the smallest MSE or MAD and return the model associated with that parameter.
