@@ -27,7 +27,6 @@ You can see the validation part in the code for the basic usage of our model.
   - The training data for the model f.
 - Y(numpy array)
   - The training label for the model f.
-- Training data $X\in \mathbb{R}^{n\times p}$ and $Y\in \mathbb{R}^{n}$
 - method:(string) $\text{\{"Dropout", "NoiseAddition", "Robustness"\}}$
   - One regularization method from either $\{\text{Dropout, NoiseAddition, Robustness}\}$
 - eval_criteria:(string) $\{\text{"MSE","MAD"}\}$
