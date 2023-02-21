@@ -1,4 +1,4 @@
-# 561-hw3 RegulizationFit Documentation
+# RegulizationFit Documentation
 In this homework, we finetunes a blackbox regression model based on three methods: **Dropout**,**NoiseAddtion** and **Robustness**
 # Installation
 1. Install scikit-learn
@@ -18,7 +18,7 @@ pip install copy
 pip install random
 ```
 # Input Parameters
-- f
+- f(object)
   - An existing model that takes $X\in \mathbb{R}^{n\times p}$ and $Y\in \mathbb{R}^{n}$ and returns a function that maps $X$ to $Y$
 - Training data $X\in \mathbb{R}^{n\times p}$ and $Y\in \mathbb{R}^{n}$
 - method: $\text{\{"Dropout", "NoiseAddition", "Robustness"\}}$
@@ -26,11 +26,13 @@ pip install random
 - eval_criteria: $\{\text{"MSE","MAD"}\}$
   - Way to evaluate the method. MSE refers to mean square error and MAD refers to mean absolute deviation.
   
-- M
+- M(int)
   - The number of Monte Carlo repetitions
-- K
+- K(int)
   - The number of folds in cross-validations 
-- c (vector)
+- c(list)
+  - a list of vector that is required in the robustness method
+- para_list(list)
   - a list of vector that is required in the robustness method
   
 # Basic Regulization Techniques 
