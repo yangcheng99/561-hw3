@@ -37,7 +37,7 @@ def noiseadd(X,var):
 
 **DropOut**
 
-The idea of behind dropout is that we randomly drop serveral columns based on the *prop*, which the proportion of dropout of the columns. The code are shown below
+The idea of behind dropout is that we randomly drop serveral columns based on the *prop*, which is the proportion of dropout of the columns. The code are shown below
 ```ruby
 def dropout(X,p):
   """
