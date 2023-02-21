@@ -108,7 +108,7 @@ def dropout_v2(X,p, max_iters=None):
 # Parameter Finetuning
 **DropOut/NoiseAddition**
 
-For these two methods, we the Monte Carlo M times for each element in the paralist.We then find the correspoding MSE or MAD. After we have run all the experiment, we find the parameter with the smallest MSE or MAD and return the model associated with that parameter.
+For these two methods, we the Monte Carlo M times for each element in the paralist. We then find the correspoding MSE or MAD. After we have run all the experiment, we find the parameter with the smallest MSE or MAD and return the model associated with that parameter. Additionally, since we have two versions of dropout, we have two version of dropout tuning functions
 
 
 
