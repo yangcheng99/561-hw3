@@ -7,7 +7,7 @@ In this homework, we finetunes a blackbox regression model based on three method
 - method: $\text{\{"Dropout", "NoiseAddition", "Robustness"\}}$
   - One regularization method from either $\{\text{Dropout, NoiseAddition, Robustness}\}$
 - eval_criteria: $\{\text{"MSE","MAD"}\}$
-  - Way to evaluate the method. MSE refers to mean square error and MAD refers to mean absolute error.
+  - Way to evaluate the method. MSE refers to mean square error and MAD refers to mean absolute deviation.
   
 - M
   - The number of Monte Carlo repetitions
@@ -32,7 +32,6 @@ def noiseadd(X,var):
   #noise=[]
   noise = np.random.normal(0,var,X.shape)
   return X + noise 
-  
 ```
 
 **DropOut**
@@ -78,3 +77,16 @@ def dropout_v2(X,p, max_iters=None):
     return [X*dropout_matrix for dropout_matrix in masks], dropout_matrix_options
   
 ```
+# Parameter finetuning
+**DropOut/NoiseAddition**
+
+For these two methods, we the Monte Carlo M times for each element in the paralist.We then find the correspoding MSE or MAD. After we have run all the experiment, we find the parameter with the smallest MSE or MAD and return the model associated with that parameter.
+
+**Robust**
+
+We do the sampling delta M times for each c in the c_list, 
+    where M is determined by size of X with a max limit. 
+    Then, we fit the model with X plus different delta and keep track of MSE.
+    After that, we find the max delta by finding the max MSE and record MSE for each c.
+    Next, by locating the min MSE of c, we can get the best c in the list of c.
+    Finally, we return the model fitted by the best parameter.
