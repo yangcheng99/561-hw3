@@ -64,7 +64,7 @@ def noiseadd(X,var):
 
 **DropOut**
 
-The idea of behind dropout is that we randomly drop serveral columns based on the *prop*, which is the proportion of dropout of the columns. The code are shown below
+dropout's idea is to drop some points in the X based on the *prop*, while dropout v2's idea of behind dropout is that we randomly drop serveral columns based on the *prop*, which is the proportion of dropout of the columns. The code are shown below
 ```ruby
 def dropout(X,p):
   """
@@ -109,6 +109,8 @@ def dropout_v2(X,p, max_iters=None):
 **DropOut/NoiseAddition**
 
 For these two methods, we the Monte Carlo M times for each element in the paralist.We then find the correspoding MSE or MAD. After we have run all the experiment, we find the parameter with the smallest MSE or MAD and return the model associated with that parameter.
+
+
 
 **Robust**
 
