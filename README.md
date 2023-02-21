@@ -32,7 +32,6 @@ You can see the validation part in the code for the basic usage of our model.
   - One regularization method from either $\{\text{Dropout, NoiseAddition, Robustness}\}$
 - eval_criteria:(string) $\{\text{"MSE","MAD"}\}$
   - Way to evaluate the method. MSE refers to mean square error and MAD refers to mean absolute deviation.
-  
 - M(int)
   - The number of Monte Carlo repetitions
 - K(int)
@@ -41,8 +40,7 @@ You can see the validation part in the code for the basic usage of our model.
   - a list of vector that is required in the robustness method
 - para_list(list) $\text{\{"Default = None"\}}$
   - a list of parameters for the noise and dropout. 
-  - For the dropout, it should be a list of dropout proportion between 0 and 1. The default setting is: $[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]$
-  - For the noise addition, it should a list of varience greater than 0. The default setting is: $[0.5, 1, 2, 3, 4, 5, 6, 7, 8]$
+  
 # Output
 - final_predictive_model(object)
   - The model trained by the best parameters.
