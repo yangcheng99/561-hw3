@@ -1,5 +1,22 @@
 # 561-hw3 RegulizationFit Documentation
 In this homework, we finetunes a blackbox regression model based on three methods: **Dropout**,**NoiseAddtion** and **Robustness**
+# Installation
+1. Install scikit-learn
+```ruby
+pip install scikit-learn
+```
+2. Install numpy
+```ruby
+pip install numpy
+```
+3. Install copy
+```ruby
+pip install copy
+```
+4. Install random
+```ruby
+pip install random
+```
 # Input Parameters
 - f
   - An existing model that takes $X\in \mathbb{R}^{n\times p}$ and $Y\in \mathbb{R}^{n}$ and returns a function that maps $X$ to $Y$
