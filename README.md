@@ -115,9 +115,4 @@ For these two methods, we the Monte Carlo M times for each element in the parali
 
 **Robust**
 
-We do the sampling delta M times for each c in the c_list, 
-    where M is determined by size of X with a max limit. 
-    Then, we fit the model with X plus different delta and keep track of MSE.
-    After that, we find the max delta by finding the max MSE and record MSE for each c.
-    Next, by locating the min MSE of c, we can get the best c in the list of c.
-    Finally, we return the model fitted by the best parameter.
+We do the sampling delta M times for each c in the c_list, where M is determined by size of X with a max limit. Then, we fit the model with X plus different delta and keep track of MSE. After that, we find the max delta by finding the max MSE and record MSE for each c. Next, by locating the min MSE of c, we can get the best c in the list of c. Finally, we return the model fitted by the best parameter.
