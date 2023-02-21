@@ -17,6 +17,9 @@ pip install copy
 ```ruby
 pip install random
 ```
+# Getting Started
+You can see the validation part in the code for the basic usage of our model.
+
 # Input Parameters
 - f(object)
   - An existing model that takes $X\in \mathbb{R}^{n\times p}$ and $Y\in \mathbb{R}^{n}$ and returns a function that maps $X$ to $Y$
