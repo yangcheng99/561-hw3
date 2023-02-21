@@ -1,5 +1,6 @@
 # Black Box Regularization Fit Documentation
 In this homework, we finetunes a blackbox regression model based on three methods: **Dropout**,**NoiseAddtion** and **Robustness**
+
 Note: we have two different dropout implementations to match different directions from two different TAs.
 # Installation
 1. Install scikit-learn
